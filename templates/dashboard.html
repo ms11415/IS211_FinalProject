@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<body>
+<h1>Table of Blog Posts</h1>
+<table>
+    <th style="text-align:left">Post Title</th>
+    <th style="text-align:left" colspan="2">Actions</th>
+
+  {% for row in blogposts %}
+  <tr>
+      <td>{{ row['title']}}</td>
+      <td><a href="edit/{{ row['id'] }}">Edit</a></td>
+      <td><a href="delete/{{ row['id'] }}">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+<p><a href="/add">Add an entry</a> or <a href="/">return to home page</a></p>
+</body>
+</html>

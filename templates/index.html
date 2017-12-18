@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IS 211 Blog Application</title>
+</head>
+<body>
+<h1>IS 211 Blog</h1>
+    {% if not blogposts %}
+<h2>Oh no!  No posts here!</h2>
+    {% else %}
+    {% for row in blogposts %}
+<h3>{{ row['title'] }}</h3>
+<p>Posted by: {{ row['author'] }} on {{ row['postdate'] }}</p>
+<p>{{ row['entry'] }}</p>
+<br>
+    {% endfor %}
+    {% endif %}
+<p>Logged in as: {{ user }}</p>
+    {% if user == 'Guest' %}
+    <p> <a href="/login">Login</a></p>
+    {% else %}
+    <p><a href="/dashboard">Dashboard</a> or <a href="/logout">Log out</a></p>
+    {% endif %}
+</body>
+</html>
