@@ -13,13 +13,14 @@ table, th, td {
 <h1>Table of Blog Posts</h1>
 <table>
     <th style="text-align:left">Post Title</th>
-    <th style="text-align:left" colspan="2">Actions</th>
+    <th style="text-align:left" colspan="3">Actions</th>
 
   {% for row in blogposts %}
   <tr>
       <td>{{ row['title']}}</td>
       <td><a href="edit/{{ row['id'] }}">Edit</a></td>
       <td><a href="delete/{{ row['id'] }}">Delete</a></td>
+      <td><a href="publish/{{ row['id'] }}">Toggle</a> Published: {{ row['publish'] }}</td>
   </tr>
   {% endfor %}
 </table>

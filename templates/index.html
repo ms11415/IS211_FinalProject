@@ -11,8 +11,9 @@
     {% else %}
     {% for row in blogposts %}
 <h3>{{ row['title'] }}</h3>
-<p>Posted by: {{ row['author'] }} on {{ row['postdate'] }}</p>
-<p>{{ row['entry'] }}</p>
+<p>Posted by: {{ row['author'] }} on {{ row['postdate'] }}
+    <a href="/permalink/{{row['id']}}">Permalink</a></p>
+<p style="white-space:pre-wrap">{{ row['entry'] }}</p>
 <br>
     {% endfor %}
     {% endif %}

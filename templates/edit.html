@@ -8,12 +8,13 @@
     {% if error %}
 <p class=error><strong>Error:</strong> {{ error }}
     {% endif %}</p>
-<form action="edit" method="post">
-    <p>Entry:<br><textarea name="entry" rows="20" cols="60" required>
-    {{ blogposts['entry'] }}
+<form action="../edit/{{blogpost['id']}}" method="post">
+    <p>Entry:<br>
+        <textarea style:"white-space:pre-wrap" name="entry" rows="20" cols="60" required>{{ blogpost['entry'] }}
     </textarea></p>
-    <input type="hidden" name="blogid" value="{{blogposts['id']}}" >
-    <p><input type="submit" value="Update"></p>
+    <input type="hidden" name="blogid" value="{{blogpost['id']}}" >
+    <p><input type="submit" value="Update"></p>or
+    <br><br><a href="../">Cancel and return to homepage</a>
 </form>
 </body>
 </html>

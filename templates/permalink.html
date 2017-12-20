@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Entry</title>
+</head>
+<body>
+{% if blogpost %}
+<h3>{{ blogpost['title'] }}</h3>
+<p>{{ blogpost['entry'] }}</p>
+{% else %}
+<p>No permalink found</p>
+{% endif %}
+<a href="../">Return to homepage</a>
+</body>
+</html>

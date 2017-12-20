@@ -5,5 +5,6 @@ CREATE TABLE blogposts (
   author TEXT,
   title TEXT,
   postdate TEXT,
-  entry TEXT
+  entry TEXT,
+  publish TEXT
 );
