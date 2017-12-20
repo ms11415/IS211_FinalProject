@@ -2,7 +2,7 @@
 A blogging web application.
 
 To use this application, run
-python pythonapp.py
+python app.py
 and then open a web browser window to 127.0.0.1:5000
 
 This blogging application presents blog entries in reverse chronological order
