@@ -7,7 +7,8 @@
 <body>
 {% if blogpost %}
 <h3>{{ blogpost['title'] }}</h3>
-<p>{{ blogpost['entry'] }}</p>
+<p>Posted by: {{ blogpost['author'] }} on {{ blogpost['postdate'] }}
+<p style="white-space:pre-wrap">{{ blogpost['entry'] }}</p>
 {% else %}
 <p>No permalink found</p>
 {% endif %}
